@@ -28,8 +28,12 @@
 html { scroll-behavior: smooth; }
 body { background: var(--cream); color: var(--charcoal); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
 
+/* CONTAINER */
+.container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 48px; box-sizing: border-box; }
+
 /* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; background: rgba(240,237,230,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; padding: 0; height: 64px; background: rgba(240,237,230,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+nav .container { display: flex; align-items: center; justify-content: space-between; height: 100%; }
 .logo { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--charcoal); }
 .logo-wordmark { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: -0.3px; }
 .nav-right { display: flex; align-items: center; gap: 14px; }
@@ -38,7 +42,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; a
 .nav-cta:hover { background: var(--green-mid); transform: translateY(-1px); }
 
 /* HERO */
-.hero { padding: 128px 48px 80px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+.hero { padding: 128px 0 80px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
 .hero::after { content: ''; position: absolute; top: -80px; right: -220px; width: 680px; height: 680px; border-radius: 50%; background: radial-gradient(circle, rgba(125,200,90,0.1) 0%, transparent 68%); pointer-events: none; }
 .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--green-pale); border: 1px solid var(--border-g); border-radius: 100px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: var(--green); margin-bottom: 28px; width: fit-content; opacity: 0; animation: fadeUp 0.7s ease 0.1s forwards; }
 .badge-dot { width: 7px; height: 7px; background: var(--green-lt); border-radius: 50%; animation: blink 2.2s ease infinite; }
@@ -56,14 +60,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; a
 .btn-text:hover { color: var(--charcoal); }
 
 /* PROOF BANNER */
-.proof-banner { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px; }
+.proof-banner { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 0; }
 .proof-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: center; }
 .proof-photos { display: flex; gap: 10px; align-items: flex-end; }
 .proof-photo { border-radius: 12px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--border); box-shadow: 0 4px 14px rgba(28,28,28,0.09); }
 .proof-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.proof-photo-a { width: 118px; height: 162px; }
-.proof-photo-b { width: 118px; height: 134px; }
-.proof-photo-c { width: 118px; height: 148px; }
+.proof-photo-a { width: 160px; height: 220px; }
+.proof-photo-b { width: 160px; height: 182px; }
+.proof-photo-c { width: 160px; height: 200px; }
 .proof-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 .proof-eyebrow::before { content: ''; display: block; width: 16px; height: 2px; background: var(--green-lt); border-radius: 1px; }
 .proof-quote-mark { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 44px; line-height: 1; color: var(--green-lt); font-weight: 800; opacity: 0.55; margin-bottom: 2px; }
@@ -74,7 +78,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; a
 .proof-role { font-size: 11.5px; color: var(--text-dim); margin-top: 1px; }
 
 /* RESEARCH STRIP */
-.research-strip { background: var(--forest); padding: 0 48px; overflow: hidden; }
+.research-strip { background: var(--forest); padding: 0; overflow: hidden; }
 .research-inner { display: flex; align-items: stretch; border-left: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); }
 .research-stat { padding: 28px 32px; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.07); display: flex; flex-direction: column; justify-content: center; min-width: 160px; }
 .research-num { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 32px; color: var(--green-lt); letter-spacing: -1px; line-height: 1; }
@@ -94,7 +98,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; a
 .slider-dot.active { background: var(--green-lt); width: 16px; border-radius: 3px; }
 
 /* SHARED SECTION */
-section { padding: 88px 48px; }
+section { padding: 88px 0; }
 .section-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
 .section-eyebrow::before { content: ''; display: block; width: 16px; height: 2px; background: var(--green-lt); border-radius: 1px; }
 .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.1; letter-spacing: -1.2px; color: var(--charcoal); max-width: 640px; margin-bottom: 14px; }
@@ -150,7 +154,7 @@ section { padding: 88px 48px; }
 .ba-result.good { background: var(--green-pale); color: var(--green); border: 1px solid var(--border-g); }
 
 /* DARK SECTION */
-.dark-section { background: var(--forest); color: #E8F5E3; padding: 88px 48px; }
+.dark-section { background: var(--forest); color: #E8F5E3; padding: 88px 0; }
 .dark-section .section-eyebrow { color: var(--green-lt); }
 .dark-section .section-eyebrow::before { background: var(--green-lt); opacity: 0.3; }
 .dark-section .section-title { color: #EFF7EC; }
@@ -204,7 +208,8 @@ section { padding: 88px 48px; }
 .success-body { font-size: 14px; color: var(--text-mid); max-width: 290px; line-height: 1.7; }
 
 /* FOOTER */
-footer { background: var(--cream-mid); border-top: 1px solid var(--border); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+footer { background: var(--cream-mid); border-top: 1px solid var(--border); padding: 28px 0; }
+footer .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
 .footer-logo { display: flex; align-items: center; gap: 7px; }
 .footer-logo-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 14.5px; }
 .footer-copy { font-size: 12px; color: var(--text-dim); }
@@ -217,26 +222,27 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
 
 /* MOBILE */
 @media (max-width: 768px) {
-  nav { padding: 0 20px; height: 60px; }
+  .container { padding: 0 20px; }
+  nav { height: 60px; }
   .nav-pill { display: none; }
-  .hero { padding: 100px 20px 64px; min-height: auto; }
+  .hero { padding: 100px 0 64px; min-height: auto; }
   .hero h1 { font-size: clamp(34px, 9vw, 52px); letter-spacing: -1.5px; }
   .hero-sub { font-size: 15px; max-width: 100%; }
   .hero-actions { gap: 14px; }
   .btn-green { padding: 13px 22px; font-size: 13.5px; }
-  .proof-banner { padding: 36px 20px; }
+  .proof-banner { padding: 36px 0; }
   .proof-inner { grid-template-columns: 1fr; gap: 24px; }
   .proof-photos { overflow-x: auto; padding-bottom: 4px; }
   .proof-photo-a { width: 110px; height: 148px; }
   .proof-photo-b { width: 110px; height: 124px; }
   .proof-photo-c { width: 110px; height: 136px; }
-  .research-strip { padding: 0 20px; }
+  .research-strip { padding: 0; }
   .research-inner { flex-direction: column; }
   .research-stat { padding: 20px 0; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); min-width: unset; }
   .research-quotes-wrap { padding: 20px 0; }
-  section { padding: 64px 20px; }
-  .dark-section { padding: 64px 20px; }
-  .form-section { padding: 64px 20px; }
+  section { padding: 64px 0; }
+  .dark-section { padding: 64px 0; }
+  .form-section { padding: 64px 0; }
   .problem-intro-grid { grid-template-columns: 1fr; gap: 24px; }
   .problem-grid { grid-template-columns: 1fr; gap: 8px; }
   .problem-callout { margin-top: 0; }
@@ -246,12 +252,18 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
   .form-layout { grid-template-columns: 1fr; gap: 36px; }
   .form-row { grid-template-columns: 1fr; gap: 10px; }
   .form-card { padding: 24px 20px; }
-  footer { padding: 24px 20px; }
+  footer { padding: 24px 0; }
 }
 @media (max-width: 480px) {
   .steps-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 34px; letter-spacing: -1.2px; }
   .section-title { font-size: 26px; letter-spacing: -0.8px; }
+}
+@media (min-width: 1280px) {
+  section { padding: 100px 0; }
+  .dark-section { padding: 100px 0; }
+  .hero { padding: 140px 0 96px; }
+  .proof-banner { padding: 60px 0; }
 }
 </style>
 </head>
@@ -259,42 +271,47 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="logo">
-    <svg width="27" height="27" viewBox="0 0 32 32" fill="none">
-      <ellipse cx="16" cy="18" rx="12" ry="8" fill="#3D8B37" transform="rotate(-20 16 18)"/>
-      <ellipse cx="16" cy="18" rx="10" ry="6.5" fill="#4EA348" transform="rotate(-20 16 18)"/>
-      <circle cx="11" cy="18" r="2.8" fill="#7DC85A" transform="rotate(-20 11 18)"/>
-      <circle cx="16" cy="16.5" r="2.8" fill="#7DC85A" transform="rotate(-20 16 16.5)"/>
-      <circle cx="21" cy="15" r="2.8" fill="#7DC85A" transform="rotate(-20 21 15)"/>
-      <path d="M26 10 Q27 8 25 7 Q23 11 19 13" stroke="#3D8B37" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-    </svg>
-    <span class="logo-wordmark">Podsee</span>
-  </a>
-  <div class="nav-right">
-    <span class="nav-pill">For Tuition Centres</span>
-    <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+  <div class="container">
+    <a href="#" class="logo">
+      <svg width="27" height="27" viewBox="0 0 32 32" fill="none">
+        <ellipse cx="16" cy="18" rx="12" ry="8" fill="#3D8B37" transform="rotate(-20 16 18)"/>
+        <ellipse cx="16" cy="18" rx="10" ry="6.5" fill="#4EA348" transform="rotate(-20 16 18)"/>
+        <circle cx="11" cy="18" r="2.8" fill="#7DC85A" transform="rotate(-20 11 18)"/>
+        <circle cx="16" cy="16.5" r="2.8" fill="#7DC85A" transform="rotate(-20 16 16.5)"/>
+        <circle cx="21" cy="15" r="2.8" fill="#7DC85A" transform="rotate(-20 21 15)"/>
+        <path d="M26 10 Q27 8 25 7 Q23 11 19 13" stroke="#3D8B37" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span class="logo-wordmark">Podsee</span>
+    </a>
+    <div class="nav-right">
+      <span class="nav-pill">For Tuition Centres</span>
+      <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+    </div>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge"><span class="badge-dot"></span>Now onboarding Singapore tuition centres</div>
-  <h1>Show parents exactly<br>what you offer.<br><span class="hl">Let the right ones book.</span></h1>
-  <p class="hero-sub">Transparent pricing, live schedules, and instant trial booking — so parents who fit your centre find you, and parents who do not filter themselves out before they ever contact you.</p>
-  <div class="hero-actions">
-    <a href="#waitlist" class="btn-green">
-      Partner With Us
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-    </a>
-    <button class="btn-text" onclick="document.querySelector('.dark-section').scrollIntoView({behavior:'smooth'})">
-      See how it works
-      <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M3 8l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-    </button>
+  <div class="container">
+    <div class="hero-badge"><span class="badge-dot"></span>Now onboarding Singapore tuition centres</div>
+    <h1>Show parents exactly<br>what you offer.<br><span class="hl">Let the right ones book.</span></h1>
+    <p class="hero-sub">Transparent pricing, live schedules, and instant trial booking — so parents who fit your centre find you, and parents who do not filter themselves out before they ever contact you.</p>
+    <div class="hero-actions">
+      <a href="#waitlist" class="btn-green">
+        Partner With Us
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+      <button class="btn-text" onclick="document.querySelector('.dark-section').scrollIntoView({behavior:'smooth'})">
+        See how it works
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M3 8l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
   </div>
 </section>
 
 <!-- PROOF BANNER -->
 <div class="proof-banner reveal">
+  <div class="container">
   <div class="proof-inner">
     <div class="proof-photos">
       <div class="proof-photo proof-photo-a">
@@ -320,10 +337,12 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
       </div>
     </div>
   </div>
+  </div>
 </div>
 
 <!-- RESEARCH STRIP + SLIDER -->
 <div class="research-strip">
+  <div class="container">
   <div class="research-inner">
     <div class="research-stat">
       <div class="research-num">300+</div>
@@ -349,6 +368,14 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
             <p class="slide-quote">"If I could see the available slots and just pick one myself, I would book on the spot. Right now I have to go back and forth just to find a time that works. Half the time I give up and look elsewhere."</p>
             <div class="slide-attr">Parent interviewed by Podsee Founders &middot; February 2026</div>
           </div>
+          <div class="slide">
+            <p class="slide-quote">"If the centre takes very long to get back, then I will move on to other centres."</p>
+            <div class="slide-attr">Parent interviewed by Podsee Founders &middot; February 2026</div>
+          </div>
+          <div class="slide">
+            <p class="slide-quote">"When I am already confirming with centre B and still no response from centre A, then I have to give up on centre A."</p>
+            <div class="slide-attr">Parent interviewed by Podsee Founders &middot; February 2026</div>
+          </div>
         </div>
       </div>
       <div class="slider-controls">
@@ -362,10 +389,12 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
       </div>
     </div>
   </div>
+  </div>
 </div>
 
 <!-- PROBLEM -->
 <section class="problem-section">
+  <div class="container">
   <div class="problem-intro-grid">
     <div>
       <div class="section-eyebrow">The Problem</div>
@@ -407,10 +436,12 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
       <p>Even after a parent decides they want to come, confirming a slot takes days of back-and-forth. By the time it is settled, their child has started at another centre. Live booking closes this gap.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- BENEFITS -->
 <section class="benefits-section">
+  <div class="container">
   <div class="section-eyebrow">Why Podsee</div>
   <div class="benefits-layout">
     <div>
@@ -473,10 +504,12 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
       </div>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- HOW IT WORKS -->
 <section class="dark-section">
+  <div class="container">
   <div class="section-eyebrow">How It Works</div>
   <h2 class="section-title" style="color:#EFF7EC;max-width:560px;">From waitlist to your first booked trial in four steps.</h2>
   <p class="section-body" style="margin-bottom:0;">No complicated setup. No tech team needed. We handle the heavy lifting and you confirm your details and go live.</p>
@@ -486,10 +519,12 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
     <div class="step-card"><div class="step-badge">3</div><div class="step-title">Parents find and book</div><div class="step-body">Your profile is live. Parents browse Podsee, see your full details, and book a trial slot directly. You get a confirmed appointment.</div></div>
     <div class="step-card"><div class="step-badge">4</div><div class="step-title">Convert and grow</div><div class="step-body">Commission charged on successful conversions only. No listing fee, no subscription, no risk.</div></div>
   </div>
+  </div>
 </section>
 
 <!-- FORM -->
 <section class="form-section" id="waitlist">
+  <div class="container">
   <div class="form-layout">
     <div>
       <div class="section-eyebrow">Apply Now</div>
@@ -552,21 +587,24 @@ footer { background: var(--cream-mid); border-top: 1px solid var(--border); padd
       </div>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-      <ellipse cx="16" cy="18" rx="12" ry="8" fill="#3D8B37" transform="rotate(-20 16 18)"/>
-      <ellipse cx="16" cy="18" rx="10" ry="6.5" fill="#4EA348" transform="rotate(-20 16 18)"/>
-      <circle cx="11" cy="18" r="2.8" fill="#7DC85A" transform="rotate(-20 11 18)"/>
-      <circle cx="16" cy="16.5" r="2.8" fill="#7DC85A" transform="rotate(-20 16 16.5)"/>
-      <circle cx="21" cy="15" r="2.8" fill="#7DC85A" transform="rotate(-20 21 15)"/>
-    </svg>
-    <span class="footer-logo-text">Podsee</span>
+  <div class="container">
+    <div class="footer-logo">
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+        <ellipse cx="16" cy="18" rx="12" ry="8" fill="#3D8B37" transform="rotate(-20 16 18)"/>
+        <ellipse cx="16" cy="18" rx="10" ry="6.5" fill="#4EA348" transform="rotate(-20 16 18)"/>
+        <circle cx="11" cy="18" r="2.8" fill="#7DC85A" transform="rotate(-20 11 18)"/>
+        <circle cx="16" cy="16.5" r="2.8" fill="#7DC85A" transform="rotate(-20 16 16.5)"/>
+        <circle cx="21" cy="15" r="2.8" fill="#7DC85A" transform="rotate(-20 21 15)"/>
+      </svg>
+      <span class="footer-logo-text">Podsee</span>
+    </div>
+    <div class="footer-copy">&copy; 2026 Podsee &middot; Singapore &middot; Built for tuition centres</div>
   </div>
-  <div class="footer-copy">&copy; 2026 Podsee &middot; Singapore &middot; Built for tuition centres</div>
 </footer>
 
 <script>
@@ -586,7 +624,7 @@ function switchTab(which) {
 }
 
 // ── QUOTE SLIDER ──
-const TOTAL = 4;
+const TOTAL = 6;
 let current = 0, timer;
 const track = document.getElementById('sliderTrack');
 const dotsWrap = document.getElementById('sliderDots');
