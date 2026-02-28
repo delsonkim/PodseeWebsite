@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podsee — Partner With Us</title>
+<meta name="description" content="Podsee helps tuition centres get discovered and booked by the right parents. Transparent pricing, live schedules, instant trial booking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream:      #F0EDE6;
+  --cream-mid:  #E8E4DB;
+  --charcoal:   #1C1C1C;
+  --green:      #3D8B37;
+  --green-mid:  #4EA348;
+  --green-lt:   #7DC85A;
+  --green-pale: #EAF4E6;
+  --forest:     #0F2010;
+  --text-dim:   rgba(28,28,28,0.42);
+  --text-mid:   rgba(28,28,28,0.65);
+  --border:     rgba(28,28,28,0.1);
+  --border-g:   rgba(61,139,55,0.2);
+  --white:      #FDFCF9;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--charcoal); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; background: rgba(240,237,230,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+.logo { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--charcoal); }
+.logo-wordmark { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: -0.3px; }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-pill { font-size: 12px; font-weight: 500; color: var(--text-dim); border: 1px solid var(--border); padding: 6px 13px; border-radius: 100px; }
+.nav-cta { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 13px; background: var(--green); color: #fff; padding: 9px 18px; border-radius: 8px; text-decoration: none; transition: background 0.2s, transform 0.15s; letter-spacing: -0.1px; }
+.nav-cta:hover { background: var(--green-mid); transform: translateY(-1px); }
+
+/* HERO */
+.hero { padding: 128px 48px 80px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+.hero::after { content: ''; position: absolute; top: -80px; right: -220px; width: 680px; height: 680px; border-radius: 50%; background: radial-gradient(circle, rgba(125,200,90,0.1) 0%, transparent 68%); pointer-events: none; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--green-pale); border: 1px solid var(--border-g); border-radius: 100px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: var(--green); margin-bottom: 28px; width: fit-content; opacity: 0; animation: fadeUp 0.7s ease 0.1s forwards; }
+.badge-dot { width: 7px; height: 7px; background: var(--green-lt); border-radius: 50%; animation: blink 2.2s ease infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
+.hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(38px, 5.4vw, 76px); line-height: 1.05; letter-spacing: -2px; max-width: 800px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
+.hero h1 .hl { color: var(--green); position: relative; display: inline-block; }
+.hero h1 .hl::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 3px; background: var(--green-lt); border-radius: 2px; opacity: 0.45; }
+.hero-sub { margin-top: 22px; max-width: 480px; font-size: 16.5px; line-height: 1.78; color: var(--text-mid); opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; }
+.hero-actions { margin-top: 36px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s ease 0.5s forwards; }
+.btn-green { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; padding: 14px 28px; border-radius: 10px; text-decoration: none; border: none; cursor: pointer; transition: all 0.2s; letter-spacing: -0.1px; white-space: nowrap; }
+.btn-green:hover { background: var(--green-mid); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(61,139,55,0.22); }
+.btn-green svg { transition: transform 0.2s; flex-shrink: 0; }
+.btn-green:hover svg { transform: translateX(3px); }
+.btn-text { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-mid); background: none; border: none; cursor: pointer; transition: color 0.2s; text-decoration: none; white-space: nowrap; }
+.btn-text:hover { color: var(--charcoal); }
+
+/* PROOF BANNER */
+.proof-banner { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px; }
+.proof-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: center; }
+.proof-photos { display: flex; gap: 10px; align-items: flex-end; }
+.proof-photo { border-radius: 12px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--border); box-shadow: 0 4px 14px rgba(28,28,28,0.09); }
+.proof-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.proof-photo-a { width: 118px; height: 162px; }
+.proof-photo-b { width: 118px; height: 134px; }
+.proof-photo-c { width: 118px; height: 148px; }
+.proof-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.proof-eyebrow::before { content: ''; display: block; width: 16px; height: 2px; background: var(--green-lt); border-radius: 1px; }
+.proof-quote-mark { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 44px; line-height: 1; color: var(--green-lt); font-weight: 800; opacity: 0.55; margin-bottom: 2px; }
+.proof-quote { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.65; letter-spacing: -0.1px; color: var(--charcoal); margin-bottom: 20px; }
+.proof-attribution { display: flex; align-items: center; gap: 11px; }
+.proof-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--green-pale); border: 1px solid var(--border-g); display: flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 13px; color: var(--green); flex-shrink: 0; }
+.proof-name { font-weight: 600; font-size: 13px; color: var(--charcoal); line-height: 1.3; }
+.proof-role { font-size: 11.5px; color: var(--text-dim); margin-top: 1px; }
+
+/* RESEARCH STRIP */
+.research-strip { background: var(--forest); padding: 0 48px; overflow: hidden; }
+.research-inner { display: flex; align-items: stretch; border-left: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06); }
+.research-stat { padding: 28px 32px; flex-shrink: 0; border-right: 1px solid rgba(255,255,255,0.07); display: flex; flex-direction: column; justify-content: center; min-width: 160px; }
+.research-num { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 32px; color: var(--green-lt); letter-spacing: -1px; line-height: 1; }
+.research-sublabel { font-size: 12px; color: rgba(232,245,227,0.45); margin-top: 4px; line-height: 1.4; }
+.research-quotes-wrap { flex: 1; padding: 28px 32px; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+.research-label { font-size: 10.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(232,245,227,0.35); margin-bottom: 12px; }
+.slider-viewport { overflow: hidden; }
+.slider-track { display: flex; transition: transform 0.45s cubic-bezier(0.4,0,0.2,1); }
+.slide { min-width: 100%; }
+.slide-quote { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 14.5px; line-height: 1.65; color: rgba(232,245,227,0.85); letter-spacing: -0.1px; margin-bottom: 10px; }
+.slide-attr { font-size: 11px; color: rgba(232,245,227,0.35); letter-spacing: 0.2px; }
+.slider-controls { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.slider-btn { width: 26px; height: 26px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); color: rgba(232,245,227,0.5); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.15s; flex-shrink: 0; }
+.slider-btn:hover { background: rgba(255,255,255,0.1); color: rgba(232,245,227,1); }
+.slider-dots { display: flex; gap: 5px; }
+.slider-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(232,245,227,0.18); cursor: pointer; transition: all 0.2s; border: none; padding: 0; }
+.slider-dot.active { background: var(--green-lt); width: 16px; border-radius: 3px; }
+
+/* SHARED SECTION */
+section { padding: 88px 48px; }
+.section-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+.section-eyebrow::before { content: ''; display: block; width: 16px; height: 2px; background: var(--green-lt); border-radius: 1px; }
+.section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.1; letter-spacing: -1.2px; color: var(--charcoal); max-width: 640px; margin-bottom: 14px; }
+.section-body { font-size: 16px; color: var(--text-mid); max-width: 490px; line-height: 1.78; }
+
+/* PROBLEM */
+.problem-section { background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.problem-intro-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; margin-bottom: 48px; }
+.problem-callout { background: var(--cream); border: 1px solid var(--border); border-radius: 14px; padding: 24px; margin-top: 4px; }
+.callout-label { font-size: 10.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 16px; }
+.callout-item { padding: 11px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; }
+.callout-item:last-child { border-bottom: none; padding-bottom: 0; }
+.callout-item:first-of-type { padding-top: 0; }
+.callout-dot { width: 6px; height: 6px; background: var(--green-lt); flex-shrink: 0; margin-top: 6px; border-radius: 50%; }
+.callout-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 13.5px; color: var(--charcoal); line-height: 1.5; }
+.callout-text .g { color: var(--green); }
+.problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.problem-card { background: var(--cream); border: 1px solid var(--border); border-radius: 13px; padding: 24px 24px 32px; position: relative; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+.problem-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(28,28,28,0.07); }
+.problem-tag { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #92400E; background: #FEF3C7; border: 1px solid #FDE68A; padding: 4px 8px; border-radius: 5px; margin-bottom: 12px; }
+.problem-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 15.5px; letter-spacing: -0.2px; margin-bottom: 7px; line-height: 1.35; }
+.problem-card p { font-size: 13px; color: var(--text-mid); line-height: 1.72; }
+.card-num { position: absolute; bottom: -10px; right: 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 72px; color: rgba(28,28,28,0.035); line-height: 1; pointer-events: none; letter-spacing: -3px; }
+
+/* BENEFITS */
+.benefits-section { background: var(--cream); }
+.benefits-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 68px; align-items: start; margin-top: 8px; }
+.benefit-items { margin-top: 22px; }
+.benefit-item { display: flex; gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+.benefit-item:first-child { border-top: 1px solid var(--border); }
+.benefit-icon { width: 34px; height: 34px; border-radius: 8px; background: var(--green-pale); border: 1px solid var(--border-g); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px; }
+.benefit-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14.5px; letter-spacing: -0.1px; margin-bottom: 4px; line-height: 1.35; }
+.benefit-body { font-size: 13px; color: var(--text-mid); line-height: 1.72; }
+
+/* BEFORE / AFTER */
+.ba-wrap { position: sticky; top: 88px; }
+.ba-label { font-size: 10.5px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+.ba-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 2px 6px rgba(28,28,28,0.05), 0 10px 32px rgba(28,28,28,0.06); }
+.ba-tabs { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
+.ba-tab { padding: 13px 16px; text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 12.5px; cursor: pointer; transition: all 0.18s; color: var(--text-dim); background: var(--cream); letter-spacing: -0.1px; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.ba-tab.active-before { color: #92400E; background: #FFFBF5; border-bottom-color: #F59E0B; }
+.ba-tab.active-after  { color: var(--green); background: #F7FDF4; border-bottom-color: var(--green); }
+.ba-content { padding: 18px 20px 22px; }
+.ba-panel { display: none; }
+.ba-panel.active { display: block; }
+.flow-step { display: flex; gap: 11px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid rgba(28,28,28,0.055); }
+.flow-step:last-of-type { border-bottom: none; }
+.flow-num { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 10.5px; color: var(--text-dim); padding-top: 2px; flex-shrink: 0; width: 16px; }
+.flow-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 13px; margin-bottom: 1px; color: var(--charcoal); letter-spacing: -0.1px; }
+.flow-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+.ba-result { margin-top: 14px; padding: 11px 14px; border-radius: 8px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: -0.1px; }
+.ba-result.bad  { background: #FFF7ED; color: #92400E; border: 1px solid #FDE68A; }
+.ba-result.good { background: var(--green-pale); color: var(--green); border: 1px solid var(--border-g); }
+
+/* DARK SECTION */
+.dark-section { background: var(--forest); color: #E8F5E3; padding: 88px 48px; }
+.dark-section .section-eyebrow { color: var(--green-lt); }
+.dark-section .section-eyebrow::before { background: var(--green-lt); opacity: 0.3; }
+.dark-section .section-title { color: #EFF7EC; }
+.dark-section .section-body { color: rgba(232,245,227,0.52); }
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 44px; }
+.step-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 13px; padding: 24px 20px; transition: background 0.2s; }
+.step-card:hover { background: rgba(255,255,255,0.07); }
+.step-badge { width: 30px; height: 30px; border-radius: 8px; background: rgba(125,200,90,0.12); border: 1px solid rgba(125,200,90,0.2); display: flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 12px; color: var(--green-lt); margin-bottom: 14px; }
+.step-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; color: #EFF7EC; margin-bottom: 7px; letter-spacing: -0.2px; line-height: 1.35; }
+.step-body { font-size: 12.5px; color: rgba(232,245,227,0.45); line-height: 1.7; }
+
+/* FORM SECTION */
+.form-section { background: var(--white); border-top: 1px solid var(--border); }
+.form-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: start; margin-top: 12px; }
+.founding-badge { display: inline-flex; align-items: center; gap: 7px; background: var(--green-pale); border: 1px solid var(--border-g); border-radius: 100px; padding: 7px 14px; font-size: 12px; font-weight: 600; color: var(--green); margin-bottom: 22px; }
+.perks-list { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+.perk-row { display: flex; align-items: center; gap: 9px; font-size: 13.5px; color: var(--text-mid); }
+.perk-check { width: 20px; height: 20px; border-radius: 50%; background: var(--green-pale); border: 1px solid var(--border-g); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green); font-size: 10px; font-weight: 700; }
+.form-card { background: var(--cream); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+.form-card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -0.4px; margin-bottom: 4px; }
+.form-card-sub { font-size: 13.5px; color: var(--text-mid); margin-bottom: 24px; line-height: 1.6; }
+.wform { display: flex; flex-direction: column; gap: 14px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.8px; color: var(--text-dim); text-transform: uppercase; }
+.field input, .field select, .field textarea { background: var(--white); border: 1.5px solid rgba(28,28,28,0.11); border-radius: 8px; color: var(--charcoal); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 11px 14px; outline: none; width: 100%; transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; appearance: none; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(61,139,55,0.09); }
+.field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 12 12'%3E%3Cpath fill='%231C1C1C' opacity='0.3' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; cursor: pointer; }
+.field textarea { resize: vertical; min-height: 80px; line-height: 1.6; }
+.phone-wrap { display: flex; gap: 7px; align-items: flex-end; }
+.phone-prefix { background: var(--cream-mid); border: 1.5px solid rgba(28,28,28,0.11); border-radius: 8px; padding: 11px 12px; font-size: 14px; font-weight: 500; color: var(--text-mid); white-space: nowrap; flex-shrink: 0; display: flex; align-items: center; gap: 4px; }
+.phone-input { flex: 1; }
+.phone-input input { background: var(--white); border: 1.5px solid rgba(28,28,28,0.11); border-radius: 8px; color: var(--charcoal); font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 11px 14px; outline: none; width: 100%; transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; }
+.phone-input input:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(61,139,55,0.09); }
+.intent-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 7px; display: block; }
+.intent-grid { display: flex; flex-direction: column; gap: 6px; }
+.intent-card { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; background: var(--white); border: 1.5px solid rgba(28,28,28,0.1); border-radius: 9px; cursor: pointer; transition: all 0.15s; user-select: none; }
+.intent-card:has(input:checked) { border-color: var(--green); background: var(--green-pale); }
+.intent-card input[type="checkbox"] { width: 15px; height: 15px; accent-color: var(--green); flex-shrink: 0; margin-top: 2px; }
+.intent-card-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 13px; color: var(--charcoal); margin-bottom: 1px; line-height: 1.3; }
+.intent-card-desc { font-size: 11.5px; color: var(--text-dim); line-height: 1.45; }
+.form-submit { background: var(--green); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; padding: 14px 22px; border-radius: 9px; border: none; width: 100%; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 7px; transition: all 0.2s; letter-spacing: -0.1px; margin-top: 4px; }
+.form-submit:hover { background: var(--green-mid); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(61,139,55,0.22); }
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; box-shadow: none; }
+.form-submit svg { transition: transform 0.2s; }
+.form-submit:hover:not(:disabled) svg { transform: translateX(3px); }
+.form-disclaimer { text-align: center; font-size: 11.5px; color: var(--text-dim); line-height: 1.6; margin-top: 9px; }
+.success-panel { display: none; flex-direction: column; align-items: center; text-align: center; padding: 44px 28px; background: var(--green-pale); border: 1.5px solid var(--border-g); border-radius: 13px; gap: 12px; }
+.success-icon { width: 48px; height: 48px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; font-size: 20px; color: #fff; font-weight: 700; }
+.success-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 21px; letter-spacing: -0.4px; }
+.success-body { font-size: 14px; color: var(--text-mid); max-width: 290px; line-height: 1.7; }
+
+/* FOOTER */
+footer { background: var(--cream-mid); border-top: 1px solid var(--border); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+.footer-logo { display: flex; align-items: center; gap: 7px; }
+.footer-logo-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 14.5px; }
+.footer-copy { font-size: 12px; color: var(--text-dim); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from {opacity:0;transform:translateY(16px)} to {opacity:1;transform:translateY(0)} }
+.reveal { opacity:0; transform:translateY(13px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.in { opacity:1; transform:translateY(0); }
+.d1{transition-delay:0.07s} .d2{transition-delay:0.14s} .d3{transition-delay:0.21s}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; height: 60px; }
+  .nav-pill { display: none; }
+  .hero { padding: 100px 20px 64px; min-height: auto; }
+  .hero h1 { font-size: clamp(34px, 9vw, 52px); letter-spacing: -1.5px; }
+  .hero-sub { font-size: 15px; max-width: 100%; }
+  .hero-actions { gap: 14px; }
+  .btn-green { padding: 13px 22px; font-size: 13.5px; }
+  .proof-banner { padding: 36px 20px; }
+  .proof-inner { grid-template-columns: 1fr; gap: 24px; }
+  .proof-photos { overflow-x: auto; padding-bottom: 4px; }
+  .proof-photo-a { width: 110px; height: 148px; }
+  .proof-photo-b { width: 110px; height: 124px; }
+  .proof-photo-c { width: 110px; height: 136px; }
+  .research-strip { padding: 0 20px; }
+  .research-inner { flex-direction: column; }
+  .research-stat { padding: 20px 0; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); min-width: unset; }
+  .research-quotes-wrap { padding: 20px 0; }
+  section { padding: 64px 20px; }
+  .dark-section { padding: 64px 20px; }
+  .form-section { padding: 64px 20px; }
+  .problem-intro-grid { grid-template-columns: 1fr; gap: 24px; }
+  .problem-grid { grid-template-columns: 1fr; gap: 8px; }
+  .problem-callout { margin-top: 0; }
+  .benefits-layout { grid-template-columns: 1fr; gap: 32px; }
+  .ba-wrap { position: static; }
+  .steps-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .form-layout { grid-template-columns: 1fr; gap: 36px; }
+  .form-row { grid-template-columns: 1fr; gap: 10px; }
+  .form-card { padding: 24px 20px; }
+  footer { padding: 24px 20px; }
+}
+@media (max-width: 480px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 34px; letter-spacing: -1.2px; }
+  .section-title { font-size: 26px; letter-spacing: -0.8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <svg width="27" height="27" viewBox="0 0 32 32" fill="none">
+      <ellipse cx="16" cy="18" rx="12" ry="8" fill="#3D8B37" transform="rotate(-20 16 18)"/>
+      <ellipse cx="16" cy="18" rx="10" ry="6.5" fill="#4EA348" transform="rotate(-20 16 18)"/>
+      <circle cx="11" cy="18" r="2.8" fill="#7DC85A" transform="rotate(-20 11 18)"/>
+      <circle cx="16" cy="16.5" r="2.8" fill="#7DC85A" transform="rotate(-20 16 16.5)"/>
+      <circle cx="21" cy="15" r="2.8" fill="#7DC85A" transform="rotate(-20 21 15)"/>
+      <path d="M26 10 Q27 8 25 7 Q23 11 19 13" stroke="#3D8B37" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="logo-wordmark">Podsee</span>
+  </a>
+  <div class="nav-right">
+    <span class="nav-pill">For Tuition Centres</span>
+    <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge"><span class="badge-dot"></span>Now onboarding Singapore tuition centres</div>
+  <h1>Show parents exactly<br>what you offer.<br><span class="hl">Let the right ones book.</span></h1>
+  <p class="hero-sub">Transparent pricing, live schedules, and instant trial booking — so parents who fit your centre find you, and parents who do not filter themselves out before they ever contact you.</p>
+  <div class="hero-actions">
+    <a href="#waitlist" class="btn-green">
+      Partner With Us
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </a>
+    <button class="btn-text" onclick="document.querySelector('.dark-section').scrollIntoView({behavior:'smooth'})">
+      See how it works
+      <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 2v10M3 8l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- PROOF BANNER -->
+<div class="proof-banner reveal">
+  <div class="proof-inner">
+    <div class="proof-photos">
+      <div class="proof-photo proof-photo-a">
+        <img src="photos/photo_2026-02-28_13-53-33.jpg" alt="Podsee founders talking to parents" loading="lazy">
+      </div>
+      <div class="proof-photo proof-photo-b">
+        <img src="photos/photo_2026-02-28_13-52-55.jpg" alt="Podsee team at community event" loading="lazy">
+      </div>
+      <div class="proof-photo proof-photo-c">
+        <img src="photos/photo_2026-02-28_13-52-48.jpg" alt="Podsee founder speaking with families" loading="lazy">
+      </div>
+    </div>
+    <div class="proof-content">
+      <div class="proof-eyebrow">From the ground</div>
+      <div class="proof-quote-mark">&ldquo;</div>
+      <p class="proof-quote">Most centre websites are all over the place. Trial price, monthly fees, whether the slot carries over &mdash; nothing is in one place. I end up having to ask the same questions every time just to decide if it is even worth trying.</p>
+      <div class="proof-attribution">
+        <div class="proof-avatar">P</div>
+        <div>
+          <div class="proof-name">Parent interviewed by Podsee Founders</div>
+          <div class="proof-role">January 2026 &middot; Singapore</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RESEARCH STRIP + SLIDER -->
+<div class="research-strip">
+  <div class="research-inner">
+    <div class="research-stat">
+      <div class="research-num">300+</div>
+      <div class="research-sublabel">parents interviewed<br>across Singapore</div>
+    </div>
+    <div class="research-quotes-wrap">
+      <div class="research-label">What parents told us</div>
+      <div class="slider-viewport">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slide">
+            <p class="slide-quote">"Most centre websites are all over the place &mdash; trial price, monthly fees, whether the slot carries over. Nothing is in one place. I end up asking the same five questions every time just to decide if it is worth trying."</p>
+            <div class="slide-attr">Parent interviewed by Podsee Founders &middot; January 2026</div>
+          </div>
+          <div class="slide">
+            <p class="slide-quote">"I just want to know the trial duration upfront &mdash; is it a full lesson or a shorter session? And does the timing match the actual class I would be signing up for? Simple questions, but I can never find the answers without asking."</p>
+            <div class="slide-attr">Parent interviewed by Podsee Founders &middot; February 2026</div>
+          </div>
+          <div class="slide">
+            <p class="slide-quote">"Some centres charge for trial, some do not. Some give a discount if you sign up after. Some let you trial without committing immediately. It would be so much easier if this was clearly written out so I can plan properly."</p>
+            <div class="slide-attr">Parent interviewed by Podsee Founders &middot; February 2026</div>
+          </div>
+          <div class="slide">
+            <p class="slide-quote">"If I could see the available slots and just pick one myself, I would book on the spot. Right now I have to go back and forth just to find a time that works. Half the time I give up and look elsewhere."</p>
+            <div class="slide-attr">Parent interviewed by Podsee Founders &middot; February 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" onclick="moveSlide(-1)" aria-label="Previous">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M7.5 2L3.5 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" onclick="moveSlide(1)" aria-label="Next">
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M4.5 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+  <div class="problem-intro-grid">
+    <div>
+      <div class="section-eyebrow">The Problem</div>
+      <h2 class="section-title">Parents already have your centre in mind. The information stops them from booking.</h2>
+      <p class="section-body">When a parent is ready to act, they want to confirm three things fast: does the schedule work, does the price fit, and what is the trial policy. If they cannot find the answers immediately, the moment passes.</p>
+    </div>
+    <div class="problem-callout reveal">
+      <div class="callout-label">What parents want to confirm before booking</div>
+      <div class="callout-item"><span class="callout-dot"></span><span class="callout-text">Does the <span class="g">trial slot carry over</span> to regular classes?</span></div>
+      <div class="callout-item"><span class="callout-dot"></span><span class="callout-text">What is the <span class="g">trial price vs monthly fee?</span></span></div>
+      <div class="callout-item"><span class="callout-dot"></span><span class="callout-text">Who is the teacher and <span class="g">what is their background?</span></span></div>
+      <div class="callout-item"><span class="callout-dot"></span><span class="callout-text">Which <span class="g">time slots</span> are still available?</span></div>
+      <div class="callout-item"><span class="callout-dot"></span><span class="callout-text">What is the <span class="g">replacement policy</span> for missed lessons?</span></div>
+    </div>
+  </div>
+  <div class="problem-grid">
+    <div class="problem-card reveal">
+      <span class="card-num">01</span>
+      <div class="problem-tag">&#9888; Missed moment</div>
+      <h3>The parent was ready. The information was not.</h3>
+      <p>Parents act on intent. When they decide to look for tuition, they want to confirm and book quickly. A centre that cannot answer their questions in that moment loses them to one that can.</p>
+    </div>
+    <div class="problem-card reveal d1">
+      <span class="card-num">02</span>
+      <div class="problem-tag">&#9888; Wasted conversations</div>
+      <h3>Replying to parents who were never going to join</h3>
+      <p>Without upfront information, every enquiry needs a full conversation. Half the time, the parent realises your schedule or price does not match. Podsee surfaces this before they contact you.</p>
+    </div>
+    <div class="problem-card reveal d2">
+      <span class="card-num">03</span>
+      <div class="problem-tag">&#9888; SEO reach</div>
+      <h3>Parents are searching Google and not finding you</h3>
+      <p>Parents search for tuition by subject and location every day. Smaller centres cannot compete on search rankings. Being on Podsee means appearing in those searches without spending on ads.</p>
+    </div>
+    <div class="problem-card reveal d3">
+      <span class="card-num">04</span>
+      <div class="problem-tag">&#9888; Booking friction</div>
+      <h3>Five messages to confirm one trial slot</h3>
+      <p>Even after a parent decides they want to come, confirming a slot takes days of back-and-forth. By the time it is settled, their child has started at another centre. Live booking closes this gap.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+  <div class="section-eyebrow">Why Podsee</div>
+  <div class="benefits-layout">
+    <div>
+      <h2 class="section-title">Let your profile qualify parents before they reach you.</h2>
+      <p class="section-body">Put your full information upfront. Parents who fit your schedule and budget book. Parents who do not, move on. Every enquiry you receive is already qualified.</p>
+      <div class="benefit-items reveal">
+        <div class="benefit-item">
+          <div class="benefit-icon">🎯</div>
+          <div>
+            <div class="benefit-title">Only hear from parents who already fit</div>
+            <div class="benefit-body">Schedule, pricing, and policies visible upfront. Parents who cannot match move on without contacting you. Every enquiry is pre-qualified.</div>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📅</div>
+          <div>
+            <div class="benefit-title">Live schedule and instant trial booking</div>
+            <div class="benefit-body">Parents see your real-time availability and confirm a slot directly. No back-and-forth. You receive a confirmed appointment, not a lead in your inbox.</div>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🔍</div>
+          <div>
+            <div class="benefit-title">We handle your SEO so you do not have to</div>
+            <div class="benefit-body">Parents search by subject and area every day. Podsee invests in ranking for those searches. Your centre appears without you spending on Google.</div>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">💰</div>
+          <div>
+            <div class="benefit-title">Zero cost until you convert</div>
+            <div class="benefit-body">Commission-only. Nothing to list, nothing to be discovered. Only when a trial converts to an enrolled student does Podsee earn anything from you.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ba-wrap reveal">
+      <p class="ba-label">See the difference</p>
+      <div class="ba-card">
+        <div class="ba-tabs">
+          <div class="ba-tab active-before" id="tab-before" onclick="switchTab('before')">Without Podsee</div>
+          <div class="ba-tab" id="tab-after" onclick="switchTab('after')">With Podsee</div>
+        </div>
+        <div class="ba-content">
+          <div class="ba-panel active" id="panel-before">
+            <div class="flow-step"><div class="flow-num">1.</div><div><div class="flow-title">Parent sends enquiry</div><div class="flow-desc">Asks about price, schedule, teacher, trial policy — separately, over time.</div></div></div>
+            <div class="flow-step"><div class="flow-num">2.</div><div><div class="flow-title">You reply when you can</div><div class="flow-desc">Hours later. Their interest has dropped. They have messaged two other centres.</div></div></div>
+            <div class="flow-step"><div class="flow-num">3.</div><div><div class="flow-title">Back and forth on scheduling</div><div class="flow-desc">Three more messages to find a slot. You check manually. They check their calendar.</div></div></div>
+            <div class="flow-step"><div class="flow-num">4.</div><div><div class="flow-title">Parent drops off</div><div class="flow-desc">Your Saturday slot does not work. Conversation ends. Time spent, nothing to show.</div></div></div>
+            <div class="ba-result bad">5 to 7 messages. 2 to 3 days. Often no result.</div>
+          </div>
+          <div class="ba-panel" id="panel-after">
+            <div class="flow-step"><div class="flow-num">1.</div><div><div class="flow-title">Parent finds your profile</div><div class="flow-desc">Pricing, schedule, teacher background, trial policy — all visible upfront.</div></div></div>
+            <div class="flow-step"><div class="flow-num">2.</div><div><div class="flow-title">Parent self-qualifies</div><div class="flow-desc">Schedule fits? Price works? They proceed. If not, they move on without wasting your time.</div></div></div>
+            <div class="flow-step"><div class="flow-num">3.</div><div><div class="flow-title">Trial slot booked instantly</div><div class="flow-desc">Parent picks from live availability and confirms directly. Zero messages from you.</div></div></div>
+            <div class="flow-step"><div class="flow-num">4.</div><div><div class="flow-title">You receive a confirmed booking</div><div class="flow-desc">Name, contact, slot confirmed. Just show up and teach well.</div></div></div>
+            <div class="ba-result good">Zero messages. Instant confirmation. Qualified parent.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="dark-section">
+  <div class="section-eyebrow">How It Works</div>
+  <h2 class="section-title" style="color:#EFF7EC;max-width:560px;">From waitlist to your first booked trial in four steps.</h2>
+  <p class="section-body" style="margin-bottom:0;">No complicated setup. No tech team needed. We handle the heavy lifting and you confirm your details and go live.</p>
+  <div class="steps-grid reveal">
+    <div class="step-card"><div class="step-badge">1</div><div class="step-title">Join the waitlist</div><div class="step-body">Submit your details below. Founding partners receive priority onboarding and the best commission terms we will offer.</div></div>
+    <div class="step-card"><div class="step-badge">2</div><div class="step-title">We build your profile together</div><div class="step-body">A 30-minute call with our team. We set up your schedule, pricing, and policies. You review, approve, and go live.</div></div>
+    <div class="step-card"><div class="step-badge">3</div><div class="step-title">Parents find and book</div><div class="step-body">Your profile is live. Parents browse Podsee, see your full details, and book a trial slot directly. You get a confirmed appointment.</div></div>
+    <div class="step-card"><div class="step-badge">4</div><div class="step-title">Convert and grow</div><div class="step-body">Commission charged on successful conversions only. No listing fee, no subscription, no risk.</div></div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="waitlist">
+  <div class="form-layout">
+    <div>
+      <div class="section-eyebrow">Apply Now</div>
+      <h2 class="section-title">Become a founding partner.</h2>
+      <p class="section-body">We are onboarding our first cohort of centres. Founding partners get the best terms we will ever offer and direct access to the Podsee team throughout.</p>
+      <div class="founding-badge reveal">&#10022; Founding partner cohort &mdash; limited availability</div>
+      <div class="perks-list reveal">
+        <div class="perk-row"><span class="perk-check">&#10003;</span>Featured placement for your first 3 months</div>
+        <div class="perk-row"><span class="perk-check">&#10003;</span>Commission rate locked at founding terms permanently</div>
+        <div class="perk-row"><span class="perk-check">&#10003;</span>Profile built by our team at no effort to you</div>
+        <div class="perk-row"><span class="perk-check">&#10003;</span>Direct line to the Podsee team throughout onboarding</div>
+        <div class="perk-row"><span class="perk-check">&#10003;</span>No commitment required to join the waitlist</div>
+      </div>
+    </div>
+    <div>
+      <div class="form-card reveal">
+        <div class="form-card-title">Join the Waitlist</div>
+        <div class="form-card-sub">Fill in your details and we will follow up within 48 hours to walk you through everything.</div>
+        <form class="wform" id="wForm">
+          <div class="form-row">
+            <div class="field"><label>Your name</label><input type="text" id="f-name" required></div>
+            <div class="field"><label>Your role</label>
+              <select id="f-role" required><option value="" disabled selected>Select role</option><option>Owner / Principal</option><option>Director</option><option>Centre Manager</option><option>Other</option></select>
+            </div>
+          </div>
+          <div class="field"><label>Centre name</label><input type="text" id="f-centre" required></div>
+          <div class="field"><label>Location / Area</label><input type="text" id="f-location" required></div>
+          <div class="field"><label>Number of branches</label>
+            <select id="f-branches"><option value="" disabled selected>Select</option><option>1 location</option><option>2 locations</option><option>3 locations</option><option>4 or more locations</option></select>
+          </div>
+          <div class="field">
+            <label>Contact number</label>
+            <div class="phone-wrap">
+              <div class="phone-prefix">&#127480;&#127468; +65</div>
+              <div class="phone-input"><input type="tel" id="f-phone" required></div>
+            </div>
+          </div>
+          <div class="field"><label>Email address</label><input type="email" id="f-email" required></div>
+          <div class="field"><label>Anything we should know?</label><textarea id="f-notes"></textarea></div>
+          <div>
+            <span class="intent-label">What matters most to you right now?</span>
+            <div class="intent-grid">
+              <label class="intent-card"><input type="checkbox" class="f-intent" value="More trial bookings" checked><div><div class="intent-card-title">Getting more trial bookings</div><div class="intent-card-desc">I want more parents finding and booking my centre directly.</div></div></label>
+              <label class="intent-card"><input type="checkbox" class="f-intent" value="Reduce enquiry time"><div><div class="intent-card-title">Reducing time spent on enquiries</div><div class="intent-card-desc">Too much time replying to parents who are not a fit.</div></div></label>
+              <label class="intent-card"><input type="checkbox" class="f-intent" value="Better SEO presence"><div><div class="intent-card-title">Better online presence and SEO</div><div class="intent-card-desc">I want my centre to appear when parents search Google.</div></div></label>
+              <label class="intent-card"><input type="checkbox" class="f-intent" value="Want a call first"><div><div class="intent-card-title">Understanding how it works first</div><div class="intent-card-desc">I would like a call before committing to anything.</div></div></label>
+            </div>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">
+            Claim My Founding Spot
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <p class="form-disclaimer">No commitment required. We will be in touch within 48 hours.</p>
+        </form>
+        <div class="success-panel" id="successPanel">
+          <div class="success-icon">&#10003;</div>
+          <div class="success-title">You are on the list.</div>
+          <div class="success-body">We will reach out within 48 hours to walk you through onboarding and answer any questions.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+      <ellipse cx="16" cy="18" rx="12" ry="8" fill="#3D8B37" transform="rotate(-20 16 18)"/>
+      <ellipse cx="16" cy="18" rx="10" ry="6.5" fill="#4EA348" transform="rotate(-20 16 18)"/>
+      <circle cx="11" cy="18" r="2.8" fill="#7DC85A" transform="rotate(-20 11 18)"/>
+      <circle cx="16" cy="16.5" r="2.8" fill="#7DC85A" transform="rotate(-20 16 16.5)"/>
+      <circle cx="21" cy="15" r="2.8" fill="#7DC85A" transform="rotate(-20 21 15)"/>
+    </svg>
+    <span class="footer-logo-text">Podsee</span>
+  </div>
+  <div class="footer-copy">&copy; 2026 Podsee &middot; Singapore &middot; Built for tuition centres</div>
+</footer>
+
+<script>
+// ── SCROLL REVEAL ──
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ── BEFORE / AFTER TABS ──
+function switchTab(which) {
+  const before = which === 'before';
+  document.getElementById('panel-before').classList.toggle('active', before);
+  document.getElementById('panel-after').classList.toggle('active', !before);
+  document.getElementById('tab-before').className = 'ba-tab' + (before ? ' active-before' : '');
+  document.getElementById('tab-after').className  = 'ba-tab' + (!before ? ' active-after' : '');
+}
+
+// ── QUOTE SLIDER ──
+const TOTAL = 4;
+let current = 0, timer;
+const track = document.getElementById('sliderTrack');
+const dotsWrap = document.getElementById('sliderDots');
+for (let i = 0; i < TOTAL; i++) {
+  const d = document.createElement('button');
+  d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+  d.setAttribute('aria-label', 'Slide ' + (i + 1));
+  d.onclick = () => goTo(i);
+  dotsWrap.appendChild(d);
+}
+function goTo(n) {
+  current = (n + TOTAL) % TOTAL;
+  track.style.transform = 'translateX(-' + (current * 100) + '%)';
+  dotsWrap.querySelectorAll('.slider-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  resetTimer();
+}
+function moveSlide(dir) { goTo(current + dir); }
+function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 5500); }
+resetTimer();
+
+// ── FORM SUBMIT → GOOGLE SHEETS ──
+// IMPORTANT: Replace the URL below with your Google Apps Script Web App URL
+// See google-apps-script.js for full setup instructions
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKq-N9rMP0J4YUpzLOTUHXxElMhO7qfRbKJojfEF7rio9JxIRKTBLn-9WobqUMQoEi/exec';
+
+document.getElementById('wForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.innerHTML = 'Submitting... <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/></svg>';
+
+  const interests = [...document.querySelectorAll('.f-intent:checked')].map(cb => cb.value).join(', ');
+
+  const params = new URLSearchParams({
+    name:       document.getElementById('f-name').value,
+    role:       document.getElementById('f-role').value,
+    centreName: document.getElementById('f-centre').value,
+    location:   document.getElementById('f-location').value,
+    branches:   document.getElementById('f-branches').value,
+    phone:      '+65 ' + document.getElementById('f-phone').value,
+    email:      document.getElementById('f-email').value,
+    notes:      document.getElementById('f-notes').value,
+    interests:  interests,
+  });
+
+  try {
+    await fetch(SCRIPT_URL + '?' + params.toString(), {
+      method: 'GET',
+      mode: 'no-cors',
+    });
+    showSuccess();
+  } catch (err) {
+    console.error('Submission error:', err);
+    showSuccess();
+  }
+});
+
+function showSuccess() {
+  document.getElementById('wForm').style.display = 'none';
+  document.getElementById('successPanel').style.display = 'flex';
+  document.getElementById('successPanel').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+</script>
+</body>
+</html>
