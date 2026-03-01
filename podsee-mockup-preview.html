@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podsee — Centre Profile Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream:      #F0EDE6;
+  --green:      #3D8B37;
+  --green-pale: #EAF4E6;
+  --green-dark: #1e3d2f;
+  --green-mid:  #4a7556;
+  --text-mid:   #5a6656;
+  --text-dim:   rgba(28,28,28,0.38);
+  --border:     #e5e5db;
+  --white:      #FDFCF9;
+  --bg-soft:    #fafaf7;
+  --amber:      #F59E0B;
+  --red:        #dc2626;
+}
+body {
+  background: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+.card {
+  background: var(--white);
+  min-height: 100vh;
+}
+
+/* BACK NAV */
+.back-nav { padding: 18px 28px 0; display: flex; align-items: center; gap: 10px; }
+.back-btn {
+  width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--white); display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--green-dark); font-size: 14px; flex-shrink: 0;
+}
+.back-sub { font-size: 11.5px; color: var(--text-mid); }
+.back-name {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+  font-size: 17px; color: var(--green-dark);
+}
+
+/* CENTRE INFO */
+.c-info { padding: 16px 28px 20px; border-bottom: 1px solid var(--border); }
+.c-title {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+  font-size: 24px; color: var(--green-dark); letter-spacing: -0.5px; margin-bottom: 7px;
+}
+.c-meta { display: flex; gap: 14px; color: var(--text-mid); font-size: 13px; margin-bottom: 10px; }
+.c-meta span { display: flex; align-items: center; gap: 4px; }
+.rating-bold { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; color: var(--green-dark); }
+.c-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.ctag {
+  padding: 4px 11px; background: var(--green-pale); color: var(--green-mid);
+  border-radius: 100px; font-size: 12px; font-weight: 600;
+  border: 1px solid rgba(74,117,86,0.15);
+}
+
+/* SECTION */
+.sec { padding: 20px 28px; border-bottom: 1px solid var(--border); }
+.sec-alt { background: var(--bg-soft); }
+.sec-title {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+  font-size: 13.5px; color: var(--green-dark); margin-bottom: 13px;
+  display: flex; align-items: center; gap: 6px;
+}
+
+/* TEACHER */
+.t-name {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700;
+  font-size: 15px; color: var(--green-dark); margin-bottom: 6px;
+}
+.t-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--green-mid); color: #fff; border-radius: 100px;
+  padding: 3px 9px; font-size: 11px; font-weight: 600; margin-left: 6px;
+  vertical-align: middle;
+}
+.t-facts { display: flex; flex-direction: column; gap: 5px; margin-top: 4px; }
+.t-fact { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--text-mid); }
+
+/* PRICING */
+.billing-row { display: flex; gap: 6px; margin-bottom: 14px; }
+.b-btn {
+  flex: 1; padding: 9px 6px; border-radius: 10px; border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 12px;
+  cursor: pointer; transition: all 0.15s; color: var(--text-mid); background: #f5f5ea;
+  text-transform: capitalize;
+}
+.b-btn.active { background: var(--green-mid); color: #fff; box-shadow: 0 2px 8px rgba(74,117,86,0.22); }
+.price-box { background: var(--bg-soft); border-radius: 13px; padding: 16px 18px; }
+.price-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 10px; }
+.price-num {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+  font-size: 34px; color: var(--green-dark); letter-spacing: -1.5px; line-height: 1;
+}
+.price-per { font-size: 13px; color: var(--text-mid); margin-top: 3px; }
+.trial-col { text-align: right; }
+.trial-lbl { font-size: 11px; color: var(--text-mid); margin-bottom: 2px; }
+.trial-num {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+  font-size: 20px; color: var(--green-mid);
+}
+.price-detail { font-size: 11.5px; color: var(--text-mid); border-top: 1px solid var(--border); padding-top: 9px; line-height: 1.5; }
+
+/* SLOTS */
+.slots-list { display: flex; flex-direction: column; gap: 7px; }
+.slot-btn {
+  width: 100%; padding: 12px 14px; border-radius: 10px;
+  border: 1.5px solid var(--border); background: var(--white);
+  cursor: pointer; transition: all 0.15s; text-align: left;
+}
+.slot-btn:hover:not(.s-full) { border-color: var(--green-mid); }
+.slot-btn.s-selected { border-color: var(--green-mid); background: var(--green-pale); }
+.slot-btn.s-full { opacity: 0.5; cursor: not-allowed; background: #f5f5ea; }
+.slot-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px; }
+.slot-name {
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+  font-size: 13px; color: var(--green-dark);
+}
+.slot-dur { font-size: 11.5px; color: var(--text-mid); margin-top: 1px; }
+.s-badge {
+  padding: 3px 9px; border-radius: 100px;
+  font-size: 11px; font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.sb-full { background: var(--red); color: #fff; }
+.sb-low  { background: var(--amber); color: #fff; }
+.sb-ok   { background: var(--green-mid); color: #fff; }
+.cap-bar { height: 5px; background: var(--border); border-radius: 100px; overflow: hidden; margin-bottom: 4px; }
+.cap-fill { height: 100%; border-radius: 100px; }
+.cf-g { background: var(--green-mid); }
+.cf-a { background: var(--amber); }
+.cf-r { background: var(--red); }
+.slot-count { font-size: 11px; color: var(--text-mid); }
+
+/* POLICIES */
+.pol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.pol-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 13px 15px; }
+.pol-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 12.5px; color: var(--green-dark); margin-bottom: 4px; }
+.pol-desc { font-size: 11.5px; color: var(--text-mid); line-height: 1.55; }
+
+/* CTA */
+.cta-bar {
+  padding: 18px 28px; background: var(--white);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  border-top: 2px solid var(--border);
+}
+.cta-hint { font-size: 12px; color: var(--text-mid); margin-bottom: 2px; }
+.cta-selected { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 13.5px; color: var(--green-dark); }
+.cta-btn {
+  padding: 13px 26px; border-radius: 10px; border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px;
+  cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.cta-btn.on { background: var(--green-mid); color: #fff; box-shadow: 0 6px 18px rgba(74,117,86,0.24); }
+.cta-btn.on:hover { background: var(--green-dark); transform: translateY(-1px); }
+.cta-btn.off { background: var(--border); color: #9ca3af; cursor: not-allowed; }
+
+.mockup-caption { text-align: center; margin-top: 14px; font-size: 13px; color: var(--text-dim); font-style: italic; }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="back-nav">
+      <button class="back-btn">←</button>
+      <div><div class="back-sub">Centre Profile</div><div class="back-name">Bright Minds Learning Centre</div></div>
+    </div>
+
+    <div class="c-info">
+      <div class="c-title">Primary 4 Science</div>
+      <div class="c-meta">
+        <span>📍 Bukit Timah</span>
+        <span>⭐ <span class="rating-bold">4.8</span>&nbsp;(24 reviews)</span>
+      </div>
+      <div class="c-tags">
+        <span class="ctag">PSLE Focused</span>
+        <span class="ctag">Small Class</span>
+        <span class="ctag">Worksheets Provided</span>
+      </div>
+    </div>
+
+    <div class="sec sec-alt">
+      <div class="sec-title">👤 Teacher Information</div>
+      <div class="t-name">Ms Sarah Lim <span class="t-badge">👩 Female Teacher</span></div>
+      <div class="t-facts">
+        <div class="t-fact">📚 8 years teaching experience</div>
+        <div class="t-fact">✅ NIE-trained, B.Sc in Life Sciences (NUS)</div>
+        <div class="t-fact">✅ Specialises in PSLE Science preparation</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title">💰 Pricing</div>
+      <div class="billing-row">
+        <button class="b-btn active" onclick="setBilling(this,'280','month')">Monthly</button>
+        <button class="b-btn" onclick="setBilling(this,'800','quarter')">Quarterly</button>
+        <button class="b-btn" onclick="setBilling(this,'1,500','term')">Termly</button>
+      </div>
+      <div class="price-box">
+        <div class="price-top">
+          <div>
+            <div class="price-num" id="priceNum">$280</div>
+            <div class="price-per">per <span id="pricePer">month</span></div>
+          </div>
+          <div class="trial-col">
+            <div class="trial-lbl">Trial Class</div>
+            <div class="trial-num">$60</div>
+          </div>
+        </div>
+        <div class="price-detail">Includes all materials and worksheets &nbsp;·&nbsp; 1.5 hours per session &nbsp;·&nbsp; 4 sessions per month</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title">📅 Available Schedule</div>
+      <div class="slots-list" id="slotsList"></div>
+    </div>
+
+    <div class="sec sec-alt">
+      <div class="sec-title">ℹ️ Policies</div>
+      <div class="pol-grid">
+        <div class="pol-card"><div class="pol-title">Trial Policy</div><div class="pol-desc">$60 for one 1.5-hour trial class. Credited as first lesson if you enrol within 7 days.</div></div>
+        <div class="pol-card"><div class="pol-title">Replacement Policy</div><div class="pol-desc">Up to 2 make-up classes per term. Must inform 24 hours in advance.</div></div>
+        <div class="pol-card"><div class="pol-title">Withdrawal</div><div class="pol-desc">1-month notice required. Pro-rated refund available.</div></div>
+        <div class="pol-card"><div class="pol-title">Materials</div><div class="pol-desc">All worksheets and notes provided. Textbook optional ($25).</div></div>
+      </div>
+    </div>
+
+    <div class="cta-bar">
+      <div>
+        <div class="cta-hint" id="ctaHint">Select a time slot to book</div>
+        <div class="cta-selected" id="ctaSlot"></div>
+      </div>
+      <button class="cta-btn off" id="ctaBtn">Book Trial Class — $60</button>
+    </div>
+  </div>
+
+
+<script>
+const slots = [
+  { id:'mon-4',  day:'Monday',    time:'4:00 PM',  cap:8,  enrolled:8,  avail:false },
+  { id:'mon-6',  day:'Monday',    time:'6:00 PM',  cap:8,  enrolled:5,  avail:true  },
+  { id:'wed-4',  day:'Wednesday', time:'4:30 PM',  cap:8,  enrolled:3,  avail:true  },
+  { id:'thu-5',  day:'Thursday',  time:'5:00 PM',  cap:8,  enrolled:6,  avail:true  },
+  { id:'thu-7',  day:'Thursday',  time:'7:00 PM',  cap:8,  enrolled:4,  avail:true  },
+  { id:'sat-9',  day:'Saturday',  time:'9:00 AM',  cap:10, enrolled:7,  avail:true  },
+  { id:'sat-11', day:'Saturday',  time:'11:00 AM', cap:10, enrolled:9,  avail:true  },
+  { id:'sat-2',  day:'Saturday',  time:'2:00 PM',  cap:10, enrolled:10, avail:false },
+];
+let selected = null;
+
+function pct(s) { return Math.round(s.enrolled/s.cap*100); }
+function fillCls(p) { return p>=100?'cf-r':p>=75?'cf-a':'cf-g'; }
+function badgeCls(s) { if(!s.avail) return 'sb-full'; return pct(s)>=75?'sb-low':'sb-ok'; }
+function badgeTxt(s) { if(!s.avail) return 'Full'; const l=s.cap-s.enrolled; return l+' spot'+(l===1?'':'s')+' left'; }
+
+function render() {
+  document.getElementById('slotsList').innerHTML = slots.map(s => {
+    const p = pct(s);
+    const cls = ['slot-btn', !s.avail?'s-full':'', selected===s.id?'s-selected':''].filter(Boolean).join(' ');
+    return `<button class="${cls}" onclick="pick('${s.id}')" ${!s.avail?'disabled':''}>
+      <div class="slot-top">
+        <div><div class="slot-name">${s.day}, ${s.time}</div><div class="slot-dur">1.5 hours</div></div>
+        <span class="s-badge ${badgeCls(s)}">${badgeTxt(s)}</span>
+      </div>
+      <div class="cap-bar"><div class="cap-fill ${fillCls(p)}" style="width:${p}%"></div></div>
+      <div class="slot-count">${s.enrolled} / ${s.cap} enrolled</div>
+    </button>`;
+  }).join('');
+}
+
+function pick(id) {
+  const s = slots.find(x=>x.id===id);
+  if(!s||!s.avail) return;
+  selected = id;
+  render();
+  document.getElementById('ctaBtn').className = 'cta-btn on';
+  document.getElementById('ctaHint').textContent = 'Selected slot';
+  document.getElementById('ctaSlot').textContent = s.day+', '+s.time;
+}
+
+function setBilling(btn, price, per) {
+  document.querySelectorAll('.b-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('priceNum').textContent = '$'+price;
+  document.getElementById('pricePer').textContent = per;
+}
+
+render();
+</script>
+</body>
+</html>
