@@ -322,10 +322,25 @@ footer .container { display: flex; align-items: center; justify-content: space-b
   .form-row { grid-template-columns: 1fr; gap: 10px; }
   .form-card { padding: 24px 20px; }
   footer { padding: 24px 0; }
+  /* Evidence section — alternating photo/quote per row */
+  .evidence-section { padding: 64px 0 80px; }
+  .evidence-header { margin-bottom: 40px; }
+  .evidence-cards { grid-template-columns: 1fr; gap: 16px; perspective: none; }
+  .evidence-card { display: flex; flex-direction: row; align-items: stretch; border-radius: 16px; }
+  .evidence-card:nth-child(even) { flex-direction: row-reverse; }
+  .evidence-card-photo { width: 45%; flex-shrink: 0; aspect-ratio: auto; min-height: 180px; }
+  .evidence-card-body { flex: 1; padding: 14px 14px 16px; display: flex; flex-direction: column; justify-content: center; }
+  .evidence-quote-mark { font-size: 24px; margin-bottom: 4px; }
+  .evidence-quote { font-size: 13px; line-height: 1.55; margin-bottom: 8px; }
+  .evidence-attr { font-size: 10px; padding-top: 8px; }
+  .evidence-gut { margin-top: 48px; padding-top: 40px; }
 }
 @media (max-width: 480px) {
   .hero h1 { font-size: 34px; letter-spacing: -1.2px; }
   .section-title { font-size: 26px; letter-spacing: -0.8px; }
+  .evidence-card-photo { width: 42%; min-height: 160px; }
+  .evidence-card-body { padding: 12px 12px 14px; }
+  .evidence-quote { font-size: 12px; line-height: 1.5; margin-bottom: 6px; }
 }
 @media (min-width: 1280px) {
   section { padding: 100px 0; }
@@ -644,7 +659,9 @@ const stackedTransforms = [
   'translate(0, 0) rotate(0deg)',
   'translate(calc(-100% - 20px), 0) rotate(-3deg)',
 ];
-evidenceCards.forEach((card, i) => { card.style.transform = stackedTransforms[i]; });
+if (window.innerWidth > 768) {
+  evidenceCards.forEach((card, i) => { card.style.transform = stackedTransforms[i]; });
+}
 const unpackObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
